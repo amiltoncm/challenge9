@@ -29,27 +29,27 @@
       <form action="" method="post" id="frmPasswd">
 
         <div class="slidecontainer">
-          Tamanho da senha: <label id="labelRange">4</label>
-          <input type="range" min="4" max="34" value="<?php echo $size ?>" class="slider" id="rangePassword"
-            name="rangePassword">
+          Tamanho da senha: <label id="label-range">4</label>
+          <input type="range" min="4" max="32" value="<?php echo $size ?>" class="slider" id="range-password"
+            name="range-password">
         </div>
 
         <div>
-          <input type="checkbox" id="chkUpper" name="chkUpper" <?php if ($upper == true){
+          <input type="checkbox" id="chk-upper" name="chk-upper" <?php if ($upper == true){
               echo " checked";    
             }?>>
           <label for="scales">Letras maiúsculas</label>
         </div>
 
         <div>
-          <input type="checkbox" id="chkNumbers" name="chkNumbers" <?php if ($numbers == true){
+          <input type="checkbox" id="chk-numbers" name="chk-numbers" <?php if ($numbers == true){
               echo " checked";    
             }?>>
           <label for="scales">Números</label>
         </div>
 
         <div>
-          <input type="checkbox" id="chkSymbols" name="chkSymbols" <?php if ($symbols == true){
+          <input type="checkbox" id="chk-symbols" name="chk-symbols" <?php if ($symbols == true){
               echo " checked";    
             }?>>
           <label for="scales">Símbolos</label>
@@ -74,8 +74,8 @@
 
 
   <script>
-  var slider = document.getElementById("rangePassword");
-  var output = document.getElementById("labelRange");
+  var slider = document.getElementById("range-password");
+  var output = document.getElementById("label-range");
   output.innerHTML = slider.value;
 
   slider.oninput = function() {

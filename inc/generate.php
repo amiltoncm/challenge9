@@ -25,7 +25,7 @@ if (! empty($_POST)){
   /**
    * Pega o tamanho da senha.
    */
-  $size = $_POST['rangePassword'];
+  $size = $_POST['range-password'];
   
   /**
    * Seta letras minúsculas com verdadeiro.
@@ -35,8 +35,8 @@ if (! empty($_POST)){
   /**
    * Busca valor das letras maiúsculas (true / false).
    */
-  if (! empty($_POST['chkUpper'])){
-    $upper = ($_POST['chkUpper']);
+  if (! empty($_POST['chk-upper'])){
+    $upper = ($_POST['chk-upper']);
     if ($upper == true){
       $tipos += 1;
     }
@@ -45,8 +45,8 @@ if (! empty($_POST)){
   /**
    * Busca valor dos números (true / false).
    */
-  if (! empty($_POST['chkNumbers'])){
-    $numbers = ($_POST['chkNumbers']);
+  if (! empty($_POST['chk-numbers'])){
+    $numbers = ($_POST['chk-numbers']);
     if ($numbers == true){
       $tipos += 1;
     }
@@ -55,8 +55,8 @@ if (! empty($_POST)){
   /**
    * Busca valor dos símbolos (true / false).
    */
-  if (! empty($_POST['chkSymbols'])){
-    $symbols = ($_POST['chkSymbols']);
+  if (! empty($_POST['chk-symbols'])){
+    $symbols = ($_POST['chk-symbols']);
     if ($symbols == true){
       $tipos += 1;
     }
@@ -107,7 +107,7 @@ if (! empty($_POST)){
    * Mistura novamente os itens do array em $res e retorna via post, cortando no 
    * tamanho definido em size.
    */
-     $res = substr(str_shuffle($password), 0, $size);
+    $res = substr(str_shuffle($password), 0, $size);
     return $res;
       
   }
